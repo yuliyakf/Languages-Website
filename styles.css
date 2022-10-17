@@ -1,3 +1,71 @@
-h1 {
-   color: red;
+/* Navbar */
+.navbar {
+   background-color: rgb(251, 114, 87);
+}
+
+.navbar-brand {
+   color: white;
+   font-size: 30px;
+   text-shadow: 4px 4px 2px rgb(5, 190, 199);
+   margin-left: 10px;
+}
+
+.navbar-brand:hover{
+   color: white;
+   text-shadow:4px 4px 2px rgb(5, 190, 199);
+   -webkit-text-stroke: 1px rgb(5, 190, 199)
+} 
+
+/* grid home page */
+
+.grid-container {
+   display: grid;
+   gap:1.5rem;
+   grid-template-columns: repeat(3, 1fr);
+   padding-block: 2rem;
+   width: min(95%, 80rem);
+   margin-inline: auto;
+}
+.column {
+   padding: 2rem;
+   border-radius: 0.5rem;
+   
+}
+
+.grid-col-span-2 {
+   grid-column: span 2;
+}
+
+.column:first-child{
+   grid-column: 1;
+   grid-row: 1 / span 2;
+}
+
+/* Footer social media icons */
+.social {
+   text-align: center;
+   margin: 20px;
+}
+.fa-brands {
+   text-decoration: none;
+   margin: 3px;
+   padding: 5px;
+   font-size: 20px;
+   border-radius: 20%;
+}
+.fa-facebook {
+   background: #3B5998;
+   color: white;
+}
+.fa-instagram {
+   background: #125688;
+   color: white;
+}
+.fa-twitter {
+   background: #55ACEE;
+   color: white;
+}
+.fa-pinterest {
+   background: #cb2027;
+   color: white;
 }
