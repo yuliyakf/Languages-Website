@@ -1,71 +1,357 @@
+* {
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+/*body {
+   display: inline-block;
+} */
+
 /* Navbar */
+
 .navbar {
-   background-color: rgb(251, 114, 87);
+   max-width: 100%;
+   background-color: rgb(0, 96, 128);
+   padding: 0px;
+   margin: 0px;
 }
 
 .navbar-brand {
-   color: white;
-   font-size: 30px;
-   text-shadow: 4px 4px 2px rgb(5, 190, 199);
-   margin-left: 10px;
+   color: rgb(248, 179, 0);
+   font-weight: bolder;
+   font-size: 35px;
+   margin-left: 20px;
+   text-shadow: 2px 2px 3px white;
 }
 
-.navbar-brand:hover{
-   color: white;
-   text-shadow:4px 4px 2px rgb(5, 190, 199);
-   -webkit-text-stroke: 1px rgb(5, 190, 199)
-} 
+.navbar-brand:hover {
+   color: rgb(248, 179, 0);
+}
 
-/* grid home page */
+.nav-tools {
+   display: inline-block;
+   margin-right: 20px;
+   padding-right: 10px;
+   padding: 5px;
+   text-align: center;
+}
+
+.navs-tool {
+   display: inline-block;
+   padding-left: 10px;
+   padding-right: 30px;
+   margin-top: 0px;
+}
+
+.nav-main {
+   display: inline-block;
+   margin-top: 0px;
+   padding: 5px;
+}
+
+.nav-item {
+   display: inline-block;
+   padding-right: 15px;
+   padding-left: 15px;
+}
+
+.nav-link {
+   color: white;
+   font-size: 17px;
+}
+
+.nav-link:hover {
+   color: rgb(248, 179, 0);
+}
+
+.navbar-toggler {
+   margin-left: 20px;
+}
+
+.dropdown-item {
+   color: rgb(0, 96, 128);
+}
+
+.dropdown-item:hover {
+   background-color: rgb(248, 179, 0);
+}
+
+.activeLink {
+   color: rgb(248, 179, 0);
+}
+
+/*grid home page */
+
+.container-main {
+   max-width: 85%;
+   max-height: 100%;
+   margin: auto;
+   background: linear-gradient(to bottom, rgb(0, 96, 128, 0.6) 30%, white);
+}
 
 .grid-container {
    display: grid;
-   gap:1.5rem;
-   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+   grid-auto-columns: 1fr;
+   grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five'
+      'six'
+      'seven';
    padding-block: 2rem;
    width: min(95%, 80rem);
    margin-inline: auto;
 }
+
 .column {
    padding: 2rem;
    border-radius: 0.5rem;
-   
+   box-shadow: 3px 3px 3px rgb(0, 96, 128);
 }
 
-.grid-col-span-2 {
-   grid-column: span 2;
+.column:hover {
+   box-shadow: 3px 3px 3px rgb(255, 244, 214);
 }
 
-.column:first-child{
-   grid-column: 1;
-   grid-row: 1 / span 2;
+.column:nth-child(1) {
+   grid-area: one;
 }
 
-/* Footer social media icons */
+.column:nth-child(2) {
+   grid-area: two;
+}
+
+.column:nth-child(3) {
+   grid-area: three;
+}
+
+.column:nth-child(4) {
+   grid-area: four;
+}
+
+.column:nth-child(5) {
+   grid-area: five;
+}
+
+.column:nth-child(6) {
+   grid-area: six;
+}
+
+.column:nth-child(7) {
+   grid-area: seven;
+}
+
+@media screen and (min-width: 65em) {
+   .grid-container {
+      grid-template-areas:
+         'one two three'
+         'one four five'
+         'six seven seven';
+   }
+}
+
+a {
+   text-decoration: none;
+}
+
+a:hover {
+   cursor: pointer;
+}
+
+.imageFront {
+   max-height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 0.5rem;
+}
+
+.headQuote {
+   background-repeat: no-repeat;
+   background-position: top right;
+   color: white;
+}
+
+.quote {
+   background-repeat: no-repeat;
+   background-position: top right;
+   color: white;
+}
+
+/*Footer social media icons*/
+
 .social {
    text-align: center;
    margin: 20px;
 }
+
 .fa-brands {
    text-decoration: none;
    margin: 3px;
    padding: 5px;
    font-size: 20px;
    border-radius: 20%;
+   color: white;
 }
+
 .fa-facebook {
    background: #3B5998;
-   color: white;
 }
+
 .fa-instagram {
    background: #125688;
-   color: white;
 }
+
 .fa-twitter {
    background: #55ACEE;
-   color: white;
 }
+
 .fa-pinterest {
    background: #cb2027;
+}
+
+/* cards on main languages page*/
+
+.card-group {
+   max-width: 100%;
+   padding-top: 30px;
+   padding-bottom: 10px;
+}
+
+.card {
+   padding: 0;
+   margin: auto;
+   height: 200px;
+   max-width: 20%;
+   position: relative;
+   border: none;
+   box-shadow: 2px 2px 3px rgb(0, 96, 128);
+}
+
+.card-body {
+   width: 100%;
+   text-align: center;
+   vertical-align: middle;
+   background-color: rgb(255, 244, 214);
+}
+
+.card-footer {
+   padding: 0px;
+   position: absolute;
+   bottom: 0px;
+   width: 100%;
+}
+
+.card-button {
+   border: none;
+   outline: 0;
+   padding: 12px;
    color: white;
+   background-color: rgb(0, 96, 128);
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+}
+
+.card-button:hover {
+   background-color: rgb(0, 170, 183);
+   color: rgb(248, 179, 0);
+}
+
+.hText {
+   font-weight: bold;
+   color: rgb(248, 179, 0);
+   text-shadow: 3px 3px 2px rgb(0, 96, 128);
+}
+
+/* Price cards */
+.priceCard-group {
+   max-width: 100%;
+   height: 100%;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+.priceCard {
+   background-color: rgb(255, 244, 214);
+   padding: 0;
+   margin-top: 30px;
+   margin: auto;
+   max-height: 100%;
+   max-width: 60%;
+   border: none;
+   box-shadow: 2px 2px 3px rgb(0, 96, 128);
+}
+
+.priceCard-body {
+   max-width: 100%;
+   text-align: center;
+   vertical-align: middle;
+   background-color: rgb(255, 244, 214);
+}
+
+.hText {
+   padding-top: 20px;
+   font-weight: bold;
+   color: rgb(0, 96, 128);
+}
+
+.pText {
+   padding-top: 20px;
+   padding-bottom: 30px;
+   color: rgb(0, 96, 128);
+   max-width: 80%;
+   margin: auto;
+}
+
+.fPar {
+   color: rgb(0, 96, 128);
+   max-width: 90%;
+   padding-left: 30px;
+   text-align: left;
+}
+
+.fText {
+   color: rgb(0, 170, 183);
+   max-width: 90%;
+   padding-left: 30px;
+   padding-bottom: 10px;
+   text-align: left;
+   font-style: italic;
+}
+
+/* Contact Form */
+.container-secondary {
+   text-align: left;
+   padding-left: 50px;
+}
+
+.inputBox {
+   width: 70%;
+   padding: 10px;
+   border: 1px solid rgb(0, 96, 128);
+   border-radius: 4px;
+   box-sizing: border-box;
+   margin: auto;
+   margin-top: 8px;
+   margin-bottom: 18px;
+   text-align: left;
+}
+
+input[type=submit] {
+   background-color: rgb(248, 179, 0);
+   color: rgb(0, 96, 128);
+   font-weight: bold;
+   padding: 12px 30px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+input[type=submit]:hover {
+   background-color: rgb(0, 170, 183);
+   color: rgb(248, 179, 0);
 }
