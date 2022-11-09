@@ -378,3 +378,8 @@ cursor: pointer;
    border-radius: 4px;
    color:rgb(0, 170, 183);
 }
+
+.container-third {
+   max-width: 90%;
+   margin: auto;
+}
