@@ -1,11 +1,13 @@
 * {
    box-sizing: border-box;
    font-family: Arial, sans-serif;
+
 }
 
-/*body {
-   display: inline-block;
-} */
+html, body {
+   box-sizing: border-box;
+   max-width: 100%;
+} 
 
 /* Navbar */
 
@@ -560,11 +562,14 @@ cursor: pointer;
    color: white;
    box-shadow: 3px 3px 3px grey;
 }
+
 .pagination {
    display: inline-block;
    margin-top: 40px;
    margin-bottom: 50px;
+
 }
+
 .pagination a {
    color:#125688;
    font-weight: bold;
@@ -879,7 +884,7 @@ cursor: pointer;
 
 .containerThree {
    display: grid;
-   width:95%;
+   max-width:95%;
    margin: auto;
    align-content:center;
    grid-template-columns: auto auto auto;
@@ -895,7 +900,7 @@ cursor: pointer;
    box-shadow: 4px 4px 4px grey;
    background-color: rgb(241, 240, 240);
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
    .item1 {grid-area: 1 / span 3}
    .item2 {grid-area: 2 / span 3}
    .item3 {grid-area: 3 / span 3}
@@ -904,6 +909,18 @@ cursor: pointer;
    font-size: 30px;
    font-weight: bold;
    color:rgb(0, 170, 183);
+}
+@media only screen and (max-width:520px){
+   .readLev3Blue{
+      max-width: 90%;
+   }
+   .readLev3Pink{
+      max-width: 90%;
+   }
+   .readLev3{
+      max-width: 90%;
+   }
+   
 }
 .readLev3Blue {
    width:450px;
@@ -1020,7 +1037,7 @@ cursor: pointer;
    color: #3B5998;
 }
 .tableOne{
-   width:100%;
+   max-width:100%;
    color: #3B5998;
    margin-top: 20px; 
    border: 1px solid gray;
